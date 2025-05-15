@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendario Moros Bereberes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loginScreen">
+    <h2>Acceso Comparsa</h2>
+    <input type="text" id="username" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="login()">Entrar</button>
+    <p id="errorMsg"></p>
+  </div>
+
+  <div id="calendarScreen" style="display:none;">
+    <div id="calendarHeader">
+      <button id="prevMonth" onclick="changeMonth(-1)">&#8592;</button>
+      <div id="monthYear"></div>
+      <button id="nextMonth" onclick="changeMonth(1)">&#8594;</button>
+    </div>
+
+    <div id="days"></div>
+
+    <div id="dayEditor">
+      <h3 id="selectedDate">Selecciona un día</h3>
+      <textarea id="noteInput" placeholder="Escribe la nota del día..."></textarea>
+      <button onclick="saveNote()">Guardar Nota</button>
+      <p class="note-info" id="lastEditedInfo"></p>
+    </div>
+
+    <div id="generalNotes">
+      <h3>Nota General</h3>
+      <textarea id="generalNote" placeholder="Escribe una nota general..."></textarea>
+      <button onclick="saveGeneralNote()">Guardar Nota General</button>
+      <p class="note-info" id="lastGeneralEditedInfo"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
